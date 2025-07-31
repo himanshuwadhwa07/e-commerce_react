@@ -20,7 +20,7 @@ const AddProducts = () => {
     useEffect(() => {
         if (updateId) {
             setLoading(true);
-            axios.get(`http://localhost:3000/products/${updateId}`)
+            axios.get(`https://e-commerce-react-backend-dbam.onrender.com/products/${updateId}`)
                 .then(res => {
                     const product = res.data.product;
                     settitle(product.title || '');
@@ -42,7 +42,7 @@ const AddProducts = () => {
 
         if (updateId) {
             // Update product
-            axios.post(`http://localhost:3000/products/update/${updateId}`, formData)
+            axios.post(`https://e-commerce-react-backend-dbam.onrender.com/products/update/${updateId}`, formData)
                 .then((res) => {
                     alert('Product updated successfully!');
                     navigate('/admin/');
@@ -52,7 +52,7 @@ const AddProducts = () => {
                 });
         } else {
             // Add new product
-            axios.post("http://localhost:3000/products/add", formData)
+            axios.post("https://e-commerce-react-backend-dbam.onrender.com/products/add", formData)
                 .then((res) => {
                     alert('Product added successfully!');
                     navigate("/");

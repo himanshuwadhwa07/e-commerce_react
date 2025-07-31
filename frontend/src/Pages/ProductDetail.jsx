@@ -32,7 +32,7 @@ const ProductDetail = () => {
 
     const getProductDetail = async()=>{
 
-       await axios.get("http://localhost:3000/products/"+productId)
+       await axios.get("https://e-commerce-react-backend-dbam.onrender.com/products/"+productId)
         .then((res)=>{
             console.log(res);
             setProductData(res.data.product);
@@ -50,7 +50,7 @@ const ProductDetail = () => {
         
         try {
             const userId = getOrCreateUserId();
-            const response = await axios.post("http://localhost:3000/cart/add", {
+            const response = await axios.post("https://e-commerce-react-backend-dbam.onrender.com/cart/add", {
                 userId: userId,
                 productId: productId,
                 quantity: 1
@@ -68,7 +68,7 @@ const ProductDetail = () => {
     const handleDelete = async () => {
         if (!window.confirm('Are you sure you want to delete this product?')) return;
         try {
-            await axios.get(`http://localhost:3000/products/delete/${productId}`);
+            await axios.get(`https://e-commerce-react-backend-dbam.onrender.com/products/delete/${productId}`);
             alert('Product deleted successfully!');
             navigate('/admin/');
         } catch (error) {

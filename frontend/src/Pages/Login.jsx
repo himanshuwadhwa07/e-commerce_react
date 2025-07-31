@@ -13,7 +13,7 @@ const Login = ({ setUser }) => {
     e.preventDefault();
     setMessage('');
     try {
-      const res = await axios.post('http://localhost:3000/users/login', { email, password });
+      const res = await axios.post('https://e-commerce-react-backend-dbam.onrender.com/users/login', { email, password });
       localStorage.setItem('user', JSON.stringify(res.data.user));
       setUser(res.data.user);
       setMessage('Login successful!');

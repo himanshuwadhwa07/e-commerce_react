@@ -12,7 +12,7 @@ const UserHome = ({ search }) => {
 
   const getData = async () => {
     await axios
-      .get("http://localhost:3000/")
+      .get("https://e-commerce-react-backend-dbam.onrender.com/")
       .then((res) => {
         setProductData(res.data.products);
       })

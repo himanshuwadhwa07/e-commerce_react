@@ -27,7 +27,7 @@ const Cart = () => {
     const fetchCartItems = async () => {
         try {
             const userId = getOrCreateUserId();
-            const response = await axios.get(`http://localhost:3000/cart/${userId}`);
+            const response = await axios.get(`https://e-commerce-react-backend-dbam.onrender.com/cart/${userId}`);
             setCartItems(response.data.items || []);
             setTotal(response.data.total || 0);
         } catch (error) {
@@ -41,7 +41,7 @@ const Cart = () => {
         if (newQuantity < 1) return;
         try {
             const userId = getOrCreateUserId();
-            await axios.put("http://localhost:3000/cart/update", {
+            await axios.put("https://e-commerce-react-backend-dbam.onrender.com/cart/update", {
                 userId: userId,
                 productId: productId,
                 quantity: newQuantity
@@ -55,7 +55,7 @@ const Cart = () => {
     const removeItem = async (productId) => {
         try {
             const userId = getOrCreateUserId();
-            await axios.delete("http://localhost:3000/cart/remove", {
+            await axios.delete("https://e-commerce-react-backend-dbam.onrender.com/cart/remove", {
                 data: {
                     userId: userId,
                     productId: productId
@@ -71,7 +71,7 @@ const Cart = () => {
     const clearCart = async () => {
         try {
             const userId = getOrCreateUserId();
-            await axios.delete(`http://localhost:3000/cart/clear/${userId}`);
+            await axios.delete(`https://e-commerce-react-backend-dbam.onrender.com/cart/clear/${userId}`);
             setCartItems([]);
             setTotal(0);
             setMessage('Cart cleared successfully');

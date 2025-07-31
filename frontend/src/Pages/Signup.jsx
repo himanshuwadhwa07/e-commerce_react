@@ -15,7 +15,7 @@ const Signup = () => {
     e.preventDefault();
     setMessage('');
     try {
-      await axios.post('http://localhost:3000/users/register', { username, email, password, role });
+      await axios.post('https://e-commerce-react-backend-dbam.onrender.com/users/register', { username, email, password, role });
       setMessage('Signup successful! Please login.');
       setTimeout(() => navigate('/login'), 1000);
     } catch (err) {
