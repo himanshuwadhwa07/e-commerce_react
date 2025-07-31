@@ -1,0 +1,20 @@
+.payment-container {
+  display: flex; justify-content: center; align-items: center; height: 100vh; background: var(--bg-main);
+}
+.payment-form {
+  background: var(--bg-card); padding: 2rem; border-radius: 18px; box-shadow: var(--shadow);
+  width: 350px; display: flex; flex-direction: column; gap: 1rem; border: 1px solid var(--border);
+  backdrop-filter: var(--glass-blur);
+}
+.payment-form h2 { text-align: center; color: var(--text-main); }
+.payment-form input {
+  padding: 0.7rem; border: 1px solid var(--border); border-radius: 8px; background: #222; color: var(--text-main);
+}
+.payment-form button {
+  padding: 0.7rem; background: var(--bg-btn); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;
+  font-size: 1rem;
+}
+.payment-form button:hover { background: linear-gradient(90deg, #00c6ff 0%, #007bff 100%); }
+.payment-success {
+  color: #00ffae; background: #1a2b22; border-radius: 6px; padding: 0.7rem; text-align: center; margin-top: 1rem;
+}

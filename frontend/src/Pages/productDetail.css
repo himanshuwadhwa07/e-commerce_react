@@ -1,0 +1,82 @@
+/* .product-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    height: 80%;
+    width: 80%;
+    display: flex;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+
+}
+
+.left img {
+    height: 100%;
+    width: 100%;
+}
+.right {
+    height: 100%;
+    width: 50%;
+} */
+
+html, body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+.home {
+  background: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+.pr {
+  background: var(--bg-card);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+.img img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+.buttons button, .buttons a {
+  background: var(--bg-btn);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  font-size: 1rem;
+}
+.buttons button:hover, .buttons a:hover {
+  background: var(--bg-btn-hover);
+  transform: translateY(-1px) scale(1.01);
+}
+.buttons .danger { background: var(--bg-btn-danger); }
+.buttons .danger:hover { background: #b71c1c; }
+.buttons .update { background: var(--bg-btn-contrast); color: var(--bg-main); }
+.buttons .update:hover { background: #e0a800; }

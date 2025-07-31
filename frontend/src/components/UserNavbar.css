@@ -1,0 +1,31 @@
+.user-navbar {
+  background: var(--bg-navbar); color: var(--text-main); display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 2rem; box-shadow: var(--shadow); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10;
+}
+.logo {
+  font-size: 1.7rem; font-weight: bold; color: var(--accent); letter-spacing: 1px;
+}
+.cart-button, .logout-btn {
+  margin-right: 1rem;
+}
+.cart-button {
+  background: var(--bg-btn); color: white; border-radius: 6px; padding: 0.7rem 1.5rem; font-weight: bold; box-shadow: 0 2px 8px #0002; transition: background 0.2s, transform 0.2s;
+}
+.cart-button:hover { background: var(--bg-btn-hover); transform: translateY(-1px) scale(1.01); }
+.logout-btn {
+  background: var(--bg-btn-danger); border-radius: 6px; color: white; font-weight: bold; box-shadow: 0 2px 8px #0002; transition: background 0.2s, transform 0.2s;
+}
+.logout-btn:hover { background: #b71c1c; transform: translateY(-1px) scale(1.01); }
+input[type="text"], .search-bar {
+  background: #181a20; color: var(--text-main); border: 2px solid #333; border-radius: 24px; padding: 0.6rem 1.2rem; font-size: 1rem; outline: none; transition: border 0.2s, box-shadow 0.2s; width: 220px; margin-right: 1rem;
+}
+input[type="text"]:focus, .search-bar:focus {
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-dark);
+}
+.search-icon {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-left: -2rem;
+  pointer-events: none;
+}

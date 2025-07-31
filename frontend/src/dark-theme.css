@@ -1,0 +1,30 @@
+:root {
+  --bg-main: #181a20;
+  --bg-card: #23272f;
+  --bg-navbar: #23272f;
+  --bg-btn: linear-gradient(90deg, #ff9800 0%, #ff5722 100%);
+  --bg-btn-hover: #ff6d00;
+  --bg-btn-danger: #e53935;
+  --text-main: #f1f1f1;
+  --text-muted: #b0b0b0;
+  --border: #222;
+  --shadow: 0 2px 12px 0 rgba(0,0,0,0.18);
+  --accent: #ff9800;
+  --accent-dark: #ff5722;
+}
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
