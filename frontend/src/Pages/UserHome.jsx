@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import "./UserHome.css";
+import "./userHome.css";
 import { Link } from "react-router-dom";
 
 const UserHome = ({ search }) => {
